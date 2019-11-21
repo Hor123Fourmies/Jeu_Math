@@ -1,0 +1,42 @@
+#jeu{
+    border: 2px solid orangered;
+    width: 800px;
+    height: 400px;
+    position: absolute;
+    padding-top:50px;
+    background: #d3ca9a;
+    font-family: Georgia;
+}
+
+#divInput{
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#commentaires{
+    margin-left: 25px;
+}
+
+#divRetourNombre0{
+    margin-top: 10px;
+}
+
+#divRetourNombre1{
+    margin-top: 10px;
+}
+
+#divRetourCommentaire{
+    margin-top: 10px;
+}
+
+#divDecompte{
+    margin-top: 10px;
+}
+
+#divRejouer{
+    margin-top: 10px;
+}
+
+#boutons{
+    margin-top: 10px;
+}
