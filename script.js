@@ -11,9 +11,9 @@ var divDecompte = document.getElementById('divDecompte');
 var divRejouer = document.getElementById('divRejouer');
 var divBoutons = document.getElementById('boutons');
 var boutonOui = document.getElementById('boutonOui');
-var nombreEssai = 10;
-var coups = 0;
 
+var coups = 0;
+var nombreEssai = 10;
 
 function jouer () {
 
@@ -21,6 +21,7 @@ function jouer () {
         var contenuInput = document.getElementById('contenuInput').value;
         var nombreTest = parseInt(contenuInput);
         console.log("mon contenuInput est " + contenuInput);
+
         nombreEssai--;
         coups++;
 
@@ -33,13 +34,13 @@ function jouer () {
                 divDecompte.innerHTML = "";
                 divRejouer.innerHTML = "Veux-tu rejouer?";
                 divBoutons.style.visibility = 'visible';
+                boutonValider.style.visibility='hidden';
             }
 
             else if (nombreTest > nombreAleatoire && nombreEssai>0 && nombreEssai<=10) {
                 divRetourNombre1.innerHTML += ' ' + nombreTest + ', ';
                 divRetourCommentaire.innerHTML = "Le nombre mystère est plus petit.";
                 divDecompte.innerHTML = "Il te reste "+nombreEssai+" essai(s).";
-
             }
 
             else if (nombreTest < nombreAleatoire && nombreEssai>0 && nombreEssai<=10) {
@@ -47,7 +48,6 @@ function jouer () {
                 divRetourCommentaire.innerHTML = "Le nombre mystère est plus grand.";
                 divDecompte.innerHTML = "Il te reste "+nombreEssai+" essai(s).";
             }
-
         }
 
             else {
@@ -56,6 +56,7 @@ function jouer () {
                 divDecompte.innerHTML = "Il ne te reste aucun essai.Tu as perdu.";
                 divRejouer.innerHTML = "Veux-tu rejouer?";
                 divBoutons.style.visibility = 'visible';
+                boutonValider.style.visibility='hidden';
             }
     });
 
